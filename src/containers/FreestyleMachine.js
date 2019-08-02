@@ -64,8 +64,6 @@ class FreestyleMachine extends Component {
     }
 
     onFlavorSelectHandler = (flavor, color) => {
-        console.log('flavor', flavor)
-        console.log('color', color.r)
         this.setState({
             selectedFlavor: {
                 ...this.state.selectedFlavor,
@@ -75,7 +73,6 @@ class FreestyleMachine extends Component {
                 b: color.b,
             }
         })
-        console.log(this.state.selectedFlavor)
     }
 
     onPourSelectionHandler = () => {
@@ -83,8 +80,40 @@ class FreestyleMachine extends Component {
         let addedMixedFlavors = this.state.mixedFlavors.concat(addingFlavor)
         this.setState({
             mixedFlavors: addedMixedFlavors
+        },
+        () => {
+            let redArr = []
+            let greenArr = []
+            let blueArr = []
+            this.state.mixedFlavors.forEach(color => {
+                redArr.push(color.r)
+                greenArr.push(color.g)
+                blueArr.push(color.b)
+            })
+            let redTotal = 0
+            for(let i = 0; i < redArr.length; i++) {
+                redTotal += redArr[i]
+            }
+            let redAvg = redTotal/redArr.length
+    
+            let greenTotal = 0
+            for(let i = 0; i < greenArr.length; i++) {
+                greenTotal += greenArr[i]
+            }
+            let greenAvg = greenTotal/greenArr.length
+    
+            let blueTotal = 0
+            for(let i = 0; i < blueArr.length; i++) {
+                blueTotal += blueArr[i]
+            }
+            let blueAvg = blueTotal/blueArr.length
+    
+            let mixedColor = {r: redAvg, g: greenAvg, b: blueAvg}
+    
+            this.setState({
+                displayColor: mixedColor
+            })
         })
-        console.log('this.state.mixedFlavors', this.state.mixedFlavors)
     }
 
     render() {
@@ -96,7 +125,7 @@ class FreestyleMachine extends Component {
                     onFlavorSelectHandler={this.onFlavorSelectHandler}
                     />
                 <PourSelection clicked={this.onPourSelectionHandler}/>
-                <DrinkDisplay />
+                <DrinkDisplay mixedDrink={this.state.displayColor}/>
             </div>
         )
     }
