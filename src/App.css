@@ -37,8 +37,52 @@ body, html, #root {
 
 .drinkDisplay {
     border: 1px solid black;
-    background-color: #ccc;
+    background-color: rgb(192,192,192);
     border-radius: 30%;
     margin-top: 40px;
     height: 40%;
+}
+
+.drink {
+  /* margin-top: 50%; */
+  position: absolute;
+  top: 65%;
+  left: 39%;
+  transform: translateY(-50%, -50%);
+  width: 100px;
+  height: 120px;
+  border: 3px solid #262626;
+  border-top: 2px solid transparent;
+  border-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /* background: blue; */
+  background-repeat: repeat-x;
+  animation: animate 10s linear infinite;
+  box-shadow: 0 0 0 3px #fff, 0 20px 35px rgba(0,0,0.5);
+}
+/* .drink:before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  border: 6px solid #fff;
+  right: -57px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+} */
+
+@keyframes animate{
+  0% {
+    background-position: 0 100px;
   }
+  10% {
+    background-position: 0 100px;
+  }
+  40% {
+    background-position: 1000px -70px;
+  }
+  80% {
+    background-position: 2000px -80px;
+  }
+}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import FlavorDisplay from '../components/FlavorDisplay'
+import DrinkDisplay from '../components/DrinkDisplay'
+import PourSelection from '../components/PourSelection'
 
 class FreestyleMachine extends Component {
     state = {
@@ -15,14 +17,14 @@ class FreestyleMachine extends Component {
                 b: 2
             },
             minuteMaid: {
-                r: 100,
-                g: 96,
-                b: 31
+                r: 255,
+                g: 244,
+                b: 79
             },
             sprite: {
-                r: 96,
-                g: 100,
-                b: 82
+                r: 244,
+                g: 255,
+                b: 219
             },
             melloYello: {
                 r: 223,
@@ -50,7 +52,8 @@ class FreestyleMachine extends Component {
                 b: 181
             },
         },
-        chosenFlavor: {
+        selectedFlavor: {
+            flavor: null,
             r: null,
             g: null,
             b: null,
@@ -60,11 +63,40 @@ class FreestyleMachine extends Component {
 
     }
 
+    onFlavorSelectHandler = (flavor, color) => {
+        console.log('flavor', flavor)
+        console.log('color', color.r)
+        this.setState({
+            selectedFlavor: {
+                ...this.state.selectedFlavor,
+                flavor: flavor,
+                r: color.r,
+                g: color.g,
+                b: color.b,
+            }
+        })
+        console.log(this.state.selectedFlavor)
+    }
+
+    onPourSelectionHandler = () => {
+        let addingFlavor = {r: this.state.selectedFlavor.r, g: this.state.selectedFlavor.g, b: this.state.selectedFlavor.b}
+        let addedMixedFlavors = this.state.mixedFlavors.concat(addingFlavor)
+        this.setState({
+            mixedFlavors: addedMixedFlavors
+        })
+        console.log('this.state.mixedFlavors', this.state.mixedFlavors)
+    }
+
     render() {
 
         return(
             <div className="h-75 d-inline-block container freestyleMachine">
-                <FlavorDisplay flavors={this.state.flavors}/>
+                <FlavorDisplay 
+                    flavors={this.state.flavors}
+                    onFlavorSelectHandler={this.onFlavorSelectHandler}
+                    />
+                <PourSelection clicked={this.onPourSelectionHandler}/>
+                <DrinkDisplay />
             </div>
         )
     }
