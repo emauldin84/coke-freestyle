@@ -3,6 +3,7 @@ import FlavorDisplay from '../components/FlavorDisplay'
 import DrinkDisplay from '../components/DrinkDisplay'
 import PourSelection from '../components/PourSelection'
 
+
 class FreestyleMachine extends Component {
     state = {
         flavors: {
@@ -115,6 +116,12 @@ class FreestyleMachine extends Component {
             })
         })
     }
+    onClearSelectionsHandler = () =>{
+        this.setState({
+            mixedFlavors: [],
+            displayColor: null,
+        })
+    }
 
     render() {
 
@@ -124,8 +131,9 @@ class FreestyleMachine extends Component {
                     flavors={this.state.flavors}
                     onFlavorSelectHandler={this.onFlavorSelectHandler}
                     />
-                <PourSelection clicked={this.onPourSelectionHandler}/>
-                <DrinkDisplay mixedDrink={this.state.displayColor}/>
+                <PourSelection clicked={this.onPourSelectionHandler} selectedFlavor={this.state.selectedFlavor}/>
+                <DrinkDisplay mixedDrink={this.state.displayColor} clicked={this.onClearSelectionsHandler}/>
+
             </div>
         )
     }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const PourSelection = (props) => (
 
-    <button className='pourSelection' onClick={props.clicked}>Push</button>
+    <button className='pourSelection' disabled={!props.selectedFlavor.flavor} onClick={props.clicked}>Push</button>
     
 )
 

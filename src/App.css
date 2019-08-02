@@ -45,6 +45,9 @@ body, html, #root {
 .pourSelection{
   margin-top: 10px;
 }
+.clearCup {
+  float: bottom;
+}
 
 .drink {
   /* margin-top: 50%; */
