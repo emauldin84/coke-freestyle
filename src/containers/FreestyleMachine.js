@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import FlavorDisplay from '../components/FlavorDisplay'
 
 class FreestyleMachine extends Component {
-    class = {
+    state = {
         flavors: {
             cokeClassic: {
                 r: 51,
@@ -50,7 +50,11 @@ class FreestyleMachine extends Component {
                 b: 181
             },
         },
-        chosenFlavor: null,
+        chosenFlavor: {
+            r: null,
+            g: null,
+            b: null,
+        },
         mixedFlavors: [],
         displayColor: null,
 
@@ -60,7 +64,7 @@ class FreestyleMachine extends Component {
 
         return(
             <div className="h-75 d-inline-block container freestyleMachine">
-                <FlavorDisplay />
+                <FlavorDisplay flavors={this.state.flavors}/>
             </div>
         )
     }
