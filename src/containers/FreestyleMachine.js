@@ -10,47 +10,56 @@ class FreestyleMachine extends Component {
             cokeClassic: {
                 r: 51,
                 g: 11,
-                b: 12
+                b: 12,
+                logoUrl: 'https://i.pinimg.com/originals/d9/6e/57/d96e57166d3f6ddf3c24eb95b7706f39.jpg',
             },
             fanta: {
                 r: 252,
                 g: 129,
-                b: 2
+                b: 2,
+                logoUrl: 'https://banner2.kisspng.com/20180329/cdq/kisspng-fizzy-drinks-pepsi-fanta-logo-complementary-colors-samosa-5abc9a629dbf65.5419487115223097306461.jpg',
             },
             minuteMaid: {
                 r: 255,
                 g: 244,
-                b: 79
+                b: 79,
+                logoUrl: 'http://hollycrab.com/lowell/wp-content/uploads/sites/3/2016/09/Lemonade.jpg',
             },
             sprite: {
                 r: 244,
                 g: 255,
-                b: 219
+                b: 219,
+                logoUrl: 'https://seeklogo.com/images/S/sprite-logo-C7F60368F3-seeklogo.com.png',
             },
             melloYello: {
                 r: 223,
                 g: 255,
-                b: 0
+                b: 0,
+                logoUrl: 'https://vignette.wikia.nocookie.net/logopedia/images/7/7f/Mello_Yello_70s.png/revision/latest/scale-to-width-down/2000?cb=20100825154647',
             },
             hiC: {
                 r: 206,
                 g: 54,
-                b: 46
+                b: 46,
+                logoUrl: 'https://vignette.wikia.nocookie.net/logopedia/images/8/83/Hi-c.svg/revision/latest/scale-to-width-down/250?cb=20180207112943',
             },
             cherryCoke: {
                 r: 161,
                 g: 14,
-                b: 32
+                b: 32,
+                logoUrl: 'https://images-na.ssl-images-amazon.com/images/I/51dghGZYPYL.jpg',
             },
             redPowerade: {
                 r: 146,
                 g: 36,
-                b: 35
+                b: 35,
+                logoUrl: 'https://denverbeverage.com/wp-content/uploads/2018/08/powerade_fruit_punch.jpg',
             },
             bluePowerade: {
                 r: 50,
                 g: 123,
-                b: 181
+                b: 181,
+                logoUrl: 'http://www.eatfunfoods.com/med-img-PoweradeMountainBlastStock.jpg',
             },
         },
         selectedFlavor: {
