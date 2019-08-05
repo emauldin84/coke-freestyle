@@ -120,6 +120,13 @@ class FreestyleMachine extends Component {
         this.setState({
             mixedFlavors: [],
             displayColor: null,
+            selectedFlavor: {
+                ...this.state.selectedFlavor,
+                flavor: null,
+                r: null,
+                g: null,
+                b: null,
+            }
         })
     }
 
