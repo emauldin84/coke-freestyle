@@ -8,7 +8,7 @@ const Flavors = (props) => {
             <div 
                 className='flavor' 
                 key={flavor} 
-                style={{backgroundColor: `rgb(${color.r}, ${color.g}, ${color.b})`}}
+                // style={{backgroundColor: `rgb(${color.r}, ${color.g}, ${color.b})`}}
                 onClick={() => props.onFlavorSelectHandler(flavor, color)}>
                 <img src={color.logoUrl} alt={flavor} className='logo'></img>
                 {/* <p>{flavor}</p> */}

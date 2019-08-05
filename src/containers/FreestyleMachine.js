@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import FlavorDisplay from '../components/FlavorDisplay'
 import DrinkDisplay from '../components/DrinkDisplay'
 import PourSelection from '../components/PourSelection'
+import Logo from '../components/Logo'
 
 
 class FreestyleMachine extends Component {
@@ -53,7 +54,7 @@ class FreestyleMachine extends Component {
                 r: 146,
                 g: 36,
                 b: 35,
-                logoUrl: 'https://denverbeverage.com/wp-content/uploads/2018/08/powerade_fruit_punch.jpg',
+                logoUrl: 'http://www.eatfunfoods.com/img-PoweadeFruitPunchStock.JPG',
             },
             bluePowerade: {
                 r: 50,
@@ -143,6 +144,7 @@ class FreestyleMachine extends Component {
 
         return(
             <div className="h-75 d-inline-block container freestyleMachine">
+                <Logo />
                 <FlavorDisplay 
                     flavors={this.state.flavors}
                     onFlavorSelectHandler={this.onFlavorSelectHandler}

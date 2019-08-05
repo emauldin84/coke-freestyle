@@ -19,18 +19,25 @@ body, html, #root {
   height: 90% !important;
   border-radius: 10% 10% 5% 5% ;
 }
+.freestyleLogo{
+  width: 30%;
+  height: auto;
+  float: right;
+  margin-top: 10px;
+}
 
 .flavorDisplay{
   border: 1px solid black;
   background-color: #ccc;
   border-radius: 20px;
-  margin-top: 40px;
   height: 40%;
+  padding: 10px;
+  overflow: scroll
 }
 
 .flavor{
-  height: 60px;
-  width: 60px;
+  height: 25%;
+  width: 25%;
   border: 1px solid black;
   border-radius: 50%;
 }
@@ -42,7 +49,9 @@ body, html, #root {
   margin-right: auto;
   display: block;
   border-radius: 50%;
-
+}
+.logo:hover{
+  cursor: pointer;
 }
 
 .drinkDisplay {
@@ -54,22 +63,32 @@ body, html, #root {
     justify-content: space-between;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    flex-direction: column
+    
 }
 .pourSelection{
   margin-top: 10px;
+  border-radius: 50%;
+  height: 50px;
+  border: 3px solid #262626;
+}
+
+.pourSelection:disabled{
+  border: 3px solid darkgrey;
+
 }
 .clearCupContainer {
   display: flex;
+  align-items: center;
 }
 .clearCup {
   align-self: center;
+  margin-bottom: 10px;
+
 }
 
 .drink {
-  /* margin-top: 50%; */
-  position: absolute;
-  top: 65%;
-  left: 39%;
   transform: translateY(-50%, -50%);
   width: 100px;
   height: 120px;
@@ -81,6 +100,9 @@ body, html, #root {
   background-repeat: repeat-x;
   animation: animate 10s linear infinite;
   box-shadow: 0 0 0 3px #fff, 0 20px 35px rgba(0,0,0.5);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 /* .drink:before {
   content: '';

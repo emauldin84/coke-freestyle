@@ -5,7 +5,7 @@ import ClearCup from './ClearCup'
 
 const DrinkDisplay = (props) => {
     return(
-        <div className='container d-inline-block drinkDisplay'>
+        <div className='drinkDisplay'>
             <Drink mixedDrink={props.mixedDrink}/>
             <ClearCup clicked={props.clicked}/>
         </div>
