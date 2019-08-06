@@ -148,6 +148,7 @@ class FreestyleMachine extends Component {
                 <FlavorDisplay 
                     flavors={this.state.flavors}
                     onFlavorSelectHandler={this.onFlavorSelectHandler}
+                    selectedFlavor={this.state.selectedFlavor}
                     />
                 <PourSelection clicked={this.onPourSelectionHandler} selectedFlavor={this.state.selectedFlavor}/>
                 <DrinkDisplay mixedDrink={this.state.displayColor} clicked={this.onClearSelectionsHandler}/>

@@ -8,6 +8,7 @@ const FlavorDisplay = (props) => {
             <Flavors 
                 flavors={props.flavors}
                 onFlavorSelectHandler={props.onFlavorSelectHandler}
+                selectedFlavor={props.selectedFlavor}
                 />
         </div>
     )
