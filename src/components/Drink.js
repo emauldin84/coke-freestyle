@@ -7,6 +7,7 @@ const Drink = (props) => {
     return(
         <div className='drinkContainer'>
             <div className="drink" style={{backgroundColor: drinkColor}}></div>
+            
         </div>
     )
 }
